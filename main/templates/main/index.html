@@ -1,0 +1,275 @@
+{% load static i18n%}
+<link rel="stylesheet" href="{% static 'main/css/main.css'%}">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="layout/light-box/lightbox.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">NIK</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mx-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/poducts">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about-us">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact_us">Contact us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Language
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">EN</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">PL</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">UA</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="hero" style="background: url({% static 'main/img/backgrounds/top_background_nuts.jpg' %}) fixed center center;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>NIK</h1>
+                    <h2>{% trans "Walnuts of the European quality standard in bulk from the Ukrainian manufacturer" %}</h2>
+                </div>
+                <!-- КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ -->
+            </div>
+            <div class="FlexContainer">
+                <div class="card">
+                    <a href="pages/item_product.html">
+                        <img src="{% static 'main/img/products/styles/amber.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AMBER</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="pages/item_product.html">
+                        <img src="{% static 'main/img/products/styles/light_amber.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">LIGHT AMBER</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="pages/item_product.html">
+                        <img src="{% static 'main/img/products/styles/light_color.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">LIGHT</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="pages/item_product.html"> <img src="{% static 'main/img/products/styles/extra.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">EXTRA</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ  КАРТКИ -->
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row" style="margin-bottom: 35px">
+                <div class="col-lg-6 order-1 order-lg-1">
+                    <a href="#"><img class="img-fluid icon-box" src="{% static 'main/img/guarantied.jpg' %}" alt=""></a>
+                </div>
+                <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-2 content">
+                    <h3>We Guarantee</h3>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>The highest quality products and the most delicious nut in the world from Ukraine.</li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="12em6" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>Accurate calibration of the entire batch of goods.</li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>High-quality and clean kernels, dried in compliance with all norms and standards.</li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>Packing in "European mesh" or greaseproof carton.</li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>Full package of accompanying documents and certificates.</li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>Fast border crossing and fast delivery to your country.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis tenetur et vel necessitatibus magni voluptates aut. Incidunt, minus natus facere, rem cumque deserunt, molestiae asperiores soluta quod, rerum excepturi illo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Factory</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-scretch">
+                    <div class="icon-box border_radius">
+                        <div class="icon">
+                            <a href="{% static 'main/img/factory/f1.jpg' %}" data-lightbox="factory" data-title="Factory"><img class="img-fluid imgover" src="{% static 'main/img/factory/f1.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-scretch">
+                    <div class="icon-box border_radius">
+                        <div class="icon">
+                            <a href="{% static 'main/img/factory/f2.jpg' %}" data-lightbox="factory" data-title="Factory"><img class="img-fluid" src="{% static 'main/img/factory/f2.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-scretch">
+                    <div class="icon-box border_radius">
+                        <div class="icon">
+                            <a href="{% static 'main/img/factory/f3.jpg' %}" data-lightbox="factory" data-title="Factory"><img class="img-fluid" src="{% static 'main/img/factory/f3.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-scretch">
+                    <div class="icon-box border_radius">
+                        <div class="icon">
+                            <a href="{% static 'main/img/factory/f4.jpg' %}" data-lightbox="factory" data-title="Factory"><img class="img-fluid" src="{% static 'main/img/factory/f4.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-scretch">
+                    <div class="icon-box border_radius">
+                        <div class="icon">
+                            <a href="{% static 'main/img/factory/f5.jpg' %}" data-lightbox="factory" data-title="Factory"><img class="img-fluid" src="{% static 'main/img/factory/f5.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-scretch">
+                    <div class="icon-box border_radius">
+                        <div class="icon">
+                            <a href="{% static 'main/img/factory/f6.jpg' %}" data-lightbox="factory" data-title="Factory"><img class="img-fluid" src="{% static 'main/img/factory/f6.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row" style="margin-bottom: 35px">
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <iframe class="inspace-15 borderedbox borderradius" style="width: 100%; height: 350px;" src="https://www.youtube.com/embed/EEdA6bVWLX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt=""></iframe>
+                </div>
+                <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 content">
+                    <h3>Excellent taste is the main advantage of the Ukrainian walnut.</h3>
+                    <ul>
+                        <li>“NIK” has been exporting walnut kernels since 2005. During this time, we were able to study modern technologies of nut production and processing perfectly and to acquire the reputation of a reliable supplier.<br><br>
+                            Most Ukrainian walnuts are grown by local residents in private households with only one-tenth of the harvest grown on large farms. The quality of the final product depends on how well organized the collection of raw product is.<br><br>
+                            That is why “NIK Group of companies” has established stable partnership relations with nut-purchasing agents as well as created a network of walnut collection points throughout the country. Due to this we are able to guarantee the availability of large amounts of product and to complete orders on time.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-1  content">
+                    <h3>Where To Find Us</h3>
+                    <iframe class="border_radius" style="width: 100%; height: 470px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.839580683501!2d24.0491102158703!3d49.864257979398786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473adce2eefc2e85%3A0x62eb24f281539e9!2sNorth%20Bus%20Station!5e0!3m2!1sen!2sbd!4v1654967469821!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-2">
+                    <h3 id="contact_us">How To Contact Us</h3>
+                    <div class="form_cont">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text help_color">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <h3>NIK</h3>
+                        <!--                         <p>Clown street Poland <br>
+                            <strong>Phone:</strong> +380635197392 <br>
+                            <strong>Email:</strong> vlados19.2002@gmail.com</p>
+ -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <div class="social-links">
+                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg></a>
+                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg></a>
+                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+                                    </svg></a>
+                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-rights">
+                        <h4>2022 - All Rights Reserved</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="layout/light-box/lightbox-plus-jquery.js"></script>
+</body>
+
+</html>

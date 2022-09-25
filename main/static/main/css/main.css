@@ -1,0 +1,676 @@
+/*#########################################################################################*/
+/*####################### NAV BAR ##################################################################*/
+/*#########################################################################################*/
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffa500;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+/*#########################################################################################*/
+/*####################### INFO ##################################################################*/
+/*#########################################################################################*/
+#hero {
+
+    width: 100%;
+    background: url('images/backgrounds/top_background_nuts.jpg') fixed center center;
+    background-size: cover;
+    position: relative;
+    /* justify-content: center;*/
+
+}
+
+#hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+#hero .container {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    max-height: 100%;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 64px;
+    color: #ffff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+#hero h1:hover {
+    color: #ffa500;
+
+}
+
+#hero h2 {
+    color: #fff;
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#hero h2:hover {
+    color: #ffa500;
+
+}
+
+#hero .icon-box h3 {
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#hero .icon-box h3 a {
+    color: #fff;
+}
+
+#hero .icon-box h3 a:hover {
+    color: #ffa500;
+}
+
+.icon-box {
+    padding: 30px 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.icon-box:hover {
+    border-color: #ffa500;
+}
+
+
+.about li {
+    list-style-type: none;
+}
+
+.about img {
+    padding: 10px;
+    border: 2px solid;
+    border-color: #D7D7D7;
+    border-radius: 10px;
+}
+
+.about iframe {
+    padding: 10px;
+    border: 2px solid;
+    border-color: #D7D7D7;
+    border-radius: 10px;
+
+}
+
+.about h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about h3:hover {
+    color: #ffa500;
+}
+
+#about {
+    background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #b09890);
+    padding: 35px 0 35px 0;
+}
+
+/*#########################################################################################*/
+/*################################ SERVICES #########################################################*/
+/*#########################################################################################*/
+.section-title h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-title h2:hover {
+    color: #ffa500;
+}
+
+.services {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url(images/backgrounds/factory.jpg) fixed center center;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.services .icon-box {
+    border: 2px solid white;
+    padding: 20px 20px;
+    transition: all ease-in-out 0.3s;
+    margin-bottom: 20px;
+}
+
+.services .icon-img .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    margin-bottom: 20px;
+
+}
+
+.services .icon-box h4 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+
+}
+
+.services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+    border-color: #ffa500;
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+}
+
+
+/*#########################################################################################*/
+/*######################## CONTACT US #################################################################*/
+/*#########################################################################################*/
+
+.border_radius {
+    border-radius: 10px;
+}
+
+.contact {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url(images/backgrounds/map_bckground.jpg) fixed center center;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.contact h3 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.form_cont {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.help_color {
+    color: gray;
+}
+
+.contact button {
+    background-color: #ffa500;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 7px 50px;
+    width: 50%;
+
+}
+
+.contact textarea {
+    resize: none;
+}
+
+/*#########################################################################################*/
+/*############################# FOOTER ############################################################*/
+/*#########################################################################################*/
+
+.footer-top {
+    background: #151515;
+    color: #fff;
+    border-bottom: 1px solid #222222;
+    padding: 30px 0 10px 0;
+    text-align: center;
+}
+
+.footer-top .footer-info {
+    margin-bottom: 30px;
+}
+
+.footer-top .footer-info h3 {
+    font-size: 28px;
+    margin-right: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-top .footer-info p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+
+.footer-top .social-links a {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    display: inline-block;
+    border-radius: 4px;
+
+}
+
+.footer-top .social-links a:hover {
+    color: #ffa500;
+}
+
+.footer-top h4 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/*#########################################################################################*/
+/*############################# CARDS ############################################################*/
+/*#########################################################################################*/
+.card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #b09890);
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card img {
+    object-fit: cover;
+}
+
+
+.card-body h5 {
+    font-style: oblique;
+    text-align: center;
+
+}
+
+
+.FlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    overflow: none;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*####### ABOUT PAGE ##################################################################################*/
+/*############################# ABOUT PAGE ################## ABOUT PAGE ##########################################*/
+/*############ ABOUT PAGE ############################# ABOUT PAGE ################################################*/
+
+#about_us {
+    width: 100%;
+    height: 40vh;
+    background: url('images/backgrounds/about_backround.jpg') fixed center center;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+#about_us:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+
+#about_us h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 64px;
+    color: #ffff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ffaa;
+
+}
+
+#about_us h1:hover {
+    color: #ffa500;
+
+}
+
+#about_us .container {
+    position: relative;
+}
+
+
+#info {
+    background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #b09890);
+}
+
+#info p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.frst_section {
+    padding-top: 50px;
+
+}
+
+.scnd_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.scnd_section a {
+    color: inherit;
+}
+
+.scnd_section img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    border-color: #D7D7D7;
+    border: 1px solid;
+    padding: 15px;
+
+}
+
+#ending_about {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url(images/backgrounds/about.jpg) fixed center center;
+    padding: 50px 0;
+    color: #fff;
+}
+
+#ending_about h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 64px;
+    color: #ffff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ffaa;
+    padding-bottom: 100px;
+
+}
+
+#ending_about h1:hover {
+    color: #ffa500;
+
+}
+
+#ending_about p {
+    font-size: 1.4rem;
+}
+
+
+
+/*##### PRODUCTS ############################################ PRODUCTS ########################################*/
+/*############################# PRODUCTS ####################### PRODUCTS #####################################*/
+/*########## PRODUCTS ########################## PRODUCTS ################################## PRODUCTS ###################*/
+
+#products {
+    width: 100%;
+    height: 40vh;
+    background: url('images/backgrounds/products_background_nuts.jpg') fixed center center;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+
+#products:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+
+#products h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 64px;
+    color: #ffff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ffaa;
+
+}
+
+#products h1:hover {
+    color: #ffa500;
+
+}
+
+#products .container {
+    position: relative;
+}
+
+
+#storage {
+    background: radial-gradient(circle farthest-corner at 20px 10px, #FBF2EB, #b09890);
+    padding: 80px 0;
+}
+
+.styles h1 {
+    margin-bottom: 80px;
+}
+
+.styles {
+    padding-bottom: 80px;
+}
+
+.classes h1 {
+    margin-bottom: 80px;
+}
+
+#order {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url(images/backgrounds/order_background_nuts.jpg) fixed center center;
+    padding: 50px 0;
+}
+
+
+/*##### ITEM ############################################ ITEM ########################################*/
+/*############################# ITEM ####################### ITEM ########################### ITEM ##########*/
+/*########## ITEM ########################## ITEM ################################## ITEM ###################*/
+
+
+
+#item {
+    background: radial-gradient(circle farthest-corner at 20px 10px, #FBF2EB, #b09890);
+    padding: 80px 0;
+}
+
+.styles h1 {
+    margin-bottom: 80px;
+}
+
+.styles {
+    padding-bottom: 80px;
+}
+
+.classes h1 {
+    margin-bottom: 80px;
+}
+
+#order {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url(images/backgrounds/order_background_nuts.jpg) fixed center center;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.info_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.info_section a {
+    color: inherit;
+}
+
+.info_section img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    border-color: #D7D7D7;
+    border: 1px solid;
+    padding: 15px;
+
+}
+
+
+
+
+/*########### MEDIA ####################### MEDIA #################### MEDIA ###################################*/
+/*### MEDIA ########################## MEDIA ###################### MEDIA #################### MEDIA ##################*/
+/*############# MEDIA ######################### MEDIA ############################# MEDIA ######################*/
+
+
+/*MAIN*/
+@media (max-width: 485px) {
+
+    .card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-body h5 {
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 384px) {
+
+    .card {
+        width: 140px;
+        height: 140px;
+    }
+
+    #hero .container {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 365px) {
+
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-body h5 {
+        font-size: 10px;
+
+    }
+
+}
+
+/*ABOUT*/
+@media (max-width: 995px) {
+    #info .pad {
+        padding-bottom: 50px;
+    }
+
+    #item .pad {
+        padding-top: 50px;
+    }
+}
