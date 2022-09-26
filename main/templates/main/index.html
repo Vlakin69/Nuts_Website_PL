@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="layout/light-box/lightbox.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main/css/lightbox.css'%}">
+    <title>{% trans 'Nuts'%}</title>
 </head>
 
 <body>
@@ -25,28 +25,30 @@
                     <div class="mx-auto"></div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/poducts">Products</a>
+                            <a class="nav-link" href="/poducts">{% trans 'Products'%}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about-us">About us</a>
+                            <a class="nav-link" href="/about-us">{% trans 'About us'%}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact_us">Contact us</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#contact_us">{% trans 'Contact us'%}</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Language
+                                {% trans 'Language'%}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">EN</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">PL</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">UA</a></li>
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as  languages %}
+                                {% for lang in languages %}
+                                    <li>
+                                        <a class="dropdown-item" href="/{{ lang.code }}/">
+                                            {{ lang.name_local }}
+                                        </a>
+
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </li>
                     </ul>
@@ -65,33 +67,33 @@
             </div>
             <div class="FlexContainer">
                 <div class="card">
-                    <a href="pages/item_product.html">
+                    <a href="/amber">
                         <img src="{% static 'main/img/products/styles/amber.png' %}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">AMBER</h5>
+                            <h5 class="card-title">{% trans "AMBER" %}</h5>
                         </div>
                     </a>
                 </div>
                 <div class="card">
-                    <a href="pages/item_product.html">
+                    <a href="/light-amber">
                         <img src="{% static 'main/img/products/styles/light_amber.png' %}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">LIGHT AMBER</h5>
+                            <h5 class="card-title">{% trans "LIGHT AMBER"%}</h5>
                         </div>
                     </a>
                 </div>
                 <div class="card">
-                    <a href="pages/item_product.html">
+                    <a href="/light">
                         <img src="{% static 'main/img/products/styles/light_color.png' %}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">LIGHT</h5>
+                            <h5 class="card-title">{% trans "LIGHT"%}</h5>
                         </div>
                     </a>
                 </div>
                 <div class="card">
-                    <a href="pages/item_product.html"> <img src="{% static 'main/img/products/styles/extra.png' %}" class="card-img-top" alt="...">
+                    <a href="/extra"> <img src="{% static 'main/img/products/styles/extra.png' %}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">EXTRA</h5>
+                            <h5 class="card-title">{% trans "EXTRA"%}</h5>
                         </div>
                     </a>
                 </div>
@@ -103,45 +105,44 @@
         <div class="container">
             <div class="row" style="margin-bottom: 35px">
                 <div class="col-lg-6 order-1 order-lg-1">
-                    <a href="#"><img class="img-fluid icon-box" src="{% static 'main/img/guarantied.jpg' %}" alt=""></a>
+                    <img class="img-fluid icon-box" src="{% static 'main/img/guarantied.jpg' %}" alt="">
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-2 content">
-                    <h3>We Guarantee</h3>
+                    <h3>{% trans "We Guarantee"%}</h3>
                     <ul>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
                                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>The highest quality products and the most delicious nut in the world from Ukraine.</li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="12em6" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
-                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>Accurate calibration of the entire batch of goods.</li>
+                            </svg>{% trans "The highest quality products and the most delicious nut in the world from Ukraine."%}</li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
                                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>High-quality and clean kernels, dried in compliance with all norms and standards.</li>
+                            </svg>{% trans "Accurate calibration of the entire batch of goods."%}</li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
                                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>Packing in "European mesh" or greaseproof carton.</li>
+                            </svg>{% trans "High-quality and clean kernels, dried in compliance with all norms and standards."%}</li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
                                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>Full package of accompanying documents and certificates.</li>
+                            </svg>{% trans 'Packing in "European mesh" or greaseproof carton.' %}</li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
                                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>Fast border crossing and fast delivery to your country.</li>
+                            </svg>{% trans "Full package of accompanying documents and certificates."%}</li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="#ffa500" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>{% trans "Fast border crossing and fast delivery to your country."%}</li>
                     </ul>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis tenetur et vel necessitatibus magni voluptates aut. Incidunt, minus natus facere, rem cumque deserunt, molestiae asperiores soluta quod, rerum excepturi illo.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="services">
+    <section class="services" style="background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url({% static 'main/img/backgrounds/factory.jpg' %}) fixed center center;">
         <div class="container">
             <div class="section-title">
-                <h2>Factory</h2>
+                <h2>{% trans "Factory"%}</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-scretch">
@@ -196,37 +197,37 @@
                     <iframe class="inspace-15 borderedbox borderradius" style="width: 100%; height: 350px;" src="https://www.youtube.com/embed/EEdA6bVWLX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt=""></iframe>
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 content">
-                    <h3>Excellent taste is the main advantage of the Ukrainian walnut.</h3>
+                    <h3>{% trans "Excellent taste is the main advantage of the Ukrainian walnut."%}</h3>
                     <ul>
-                        <li>“NIK” has been exporting walnut kernels since 2005. During this time, we were able to study modern technologies of nut production and processing perfectly and to acquire the reputation of a reliable supplier.<br><br>
-                            Most Ukrainian walnuts are grown by local residents in private households with only one-tenth of the harvest grown on large farms. The quality of the final product depends on how well organized the collection of raw product is.<br><br>
-                            That is why “NIK Group of companies” has established stable partnership relations with nut-purchasing agents as well as created a network of walnut collection points throughout the country. Due to this we are able to guarantee the availability of large amounts of product and to complete orders on time.</li>
+                        <li>{% trans '“NIK” has been exporting walnut kernels since 2005. During this time, we were able to study modern technologies of nut production and processing perfectly and to acquire the reputation of a reliable supplier.' %}<br><br>
+                            {% trans 'Most Ukrainian walnuts are grown by local residents in private households with only one-tenth of the harvest grown on large farms. The quality of the final product depends on how well organized the collection of raw product is.'%}<br><br>
+                            {% trans 'That is why “NIK Group of companies” has established stable partnership relations with nut-purchasing agents as well as created a network of walnut collection points throughout the country. Due to this we are able to guarantee the availability of large amounts of product and to complete orders on time.'%}</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" style="background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url({% static 'main/img/backgrounds/map_bckground.jpg' %}) fixed center center;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-1  content">
-                    <h3>Where To Find Us</h3>
+                    <h3>{% trans "Where To Find Us"%}</h3>
                     <iframe class="border_radius" style="width: 100%; height: 470px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.839580683501!2d24.0491102158703!3d49.864257979398786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473adce2eefc2e85%3A0x62eb24f281539e9!2sNorth%20Bus%20Station!5e0!3m2!1sen!2sbd!4v1654967469821!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-2">
-                    <h3 id="contact_us">How To Contact Us</h3>
+                    <h3 id="contact_us">{% trans "How To Contact Us"%}</h3>
                     <div class="form_cont">
                         <form>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                                <label for="exampleInputEmail1" class="form-label">{% trans "Email Address"%}</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text help_color">We'll never share your email with anyone else.</div>
+                                <div id="emailHelp" class="form-text help_color">{% trans "We'll never share your email with anyone else."%}</div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <label for="exampleFormControlTextarea1" class="form-label">{% trans "Message"%}</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
                             </div>
-                            <button type="submit" class="btn">Send</button>
+                            <button type="submit" class="btn">{% trans "Send" %}</button>
                         </form>
                     </div>
                 </div>
@@ -239,10 +240,6 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <h3>NIK</h3>
-                        <!--                         <p>Clown street Poland <br>
-                            <strong>Phone:</strong> +380635197392 <br>
-                            <strong>Email:</strong> vlados19.2002@gmail.com</p>
- -->
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-info">
@@ -263,13 +260,13 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 footer-rights">
-                        <h4>2022 - All Rights Reserved</h4>
+                        <h4>{% trans '2022 - All Rights Reserved'%}</h4>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="layout/light-box/lightbox-plus-jquery.js"></script>
+    <script src="{% static 'main/js/light-box/lightbox-plus-jquery.js'%}"></script>
 </body>
 
 </html>

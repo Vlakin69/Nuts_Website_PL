@@ -113,7 +113,6 @@ LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('en', _('English')),
     ('pl', _('Polish')),
-    ('ua', _('Ukrainian'))
 )
 LOCALE_PATHS = [
         os.path.join(BASE_DIR, 'locale')

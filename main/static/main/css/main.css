@@ -37,7 +37,6 @@
     background: url('images/backgrounds/top_background_nuts.jpg') fixed center center;
     background-size: cover;
     position: relative;
-    /* justify-content: center;*/
 
 }
 
@@ -499,7 +498,7 @@
 #products {
     width: 100%;
     height: 40vh;
-    background: url('images/backgrounds/products_background_nuts.jpg') fixed center center;
+    /*background: url('images/backgrounds/products_background_nuts.jpg') fixed center center;*/
     background-size: cover;
     position: relative;
 

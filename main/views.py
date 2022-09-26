@@ -16,3 +16,19 @@ def products(request):
 
 def item_product(request):
     return render(request, 'main/pages/item_product.html')
+
+
+def amber(request):
+    return render(request, 'main/pages/amber.html')
+
+
+def light_amber(request):
+    return render(request, 'main/pages/light_amber.html')
+
+
+def light(request):
+    return render(request, 'main/pages/light_color.html')
+
+
+def extra(request):
+    return render(request, 'main/pages/extra_light.html')
